@@ -40,15 +40,13 @@
 
 
 # For highest score in a list 3
-student_height=input("Input a list of student height").split()
-for n in range(0,len(student_height)):
-    student_height[n]=int(student_height[n]); 
-print(student_height)
+# student_height=input("Input a list of student height").split()
+# for n in range(0,len(student_height)):
+#     student_height[n]=int(student_height[n]); 
+# print(student_height)
 
-cur=0;
-for height in student_height:
-    if height>cur:
-        cur=height
-    else:
-         cur;
-print(cur)         
+# cur=0;
+# for height in student_height:
+#     if height>cur:
+#         cur=height
+# print(cur)         
