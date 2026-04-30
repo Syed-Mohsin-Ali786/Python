@@ -30,3 +30,26 @@
 # discounted_price= total_count - discount_amount
 
 # print(f"The discount amount is: {discounted_price}")
+
+# list = ["ali","hassan","hussain"]
+# string =" apo ".join(list) 
+# print(string)
+
+# text=" hello. world . hello    "
+# # print(text[-1:-5])
+# # print (text[-1:-6:-1])
+
+# real=text.replace("hello","real")
+# # print (text.strip())
+# print(text.split("."))
+
+
+# formate
+# text="My name is {},I love to {}"
+# result=text.format("ali","reading book");
+# print(result)
+
+# f string
+# name="ali"  
+# hobby="reading book"
+# result=f"My name is {name},I love to {hobby}"

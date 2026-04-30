@@ -14,3 +14,5 @@ match operator:
     case "%":
         result=value1 % value2
 print(f"Result of {value1} {operator} {value2} is {result}")
+
+string=" """""""""""sdfakfopsdafsd"""""""""

@@ -50,3 +50,71 @@
 #     if height>cur:
 #         cur=height
 # print(cur)         
+
+# Range loop 4
+# a=int(input("Enter your first number"))
+# b=int(input("Enter your second number"))
+# for number in range(a,b,2):
+#     print(number)
+
+# total=0;
+# for number in range (1,101):
+#     total += number
+# print(total)    
+
+# toatl even number 5
+# total=0;
+# for number in range (1,101):
+#     if number%2==0:
+#      total += number
+# print(total)
+
+#another way to find total even number
+# total=0;
+# for number in range(2,101,2):
+#     total += number
+# print(total)
+
+# fizz buzz game 6
+# for number in range(1,101):
+#  case1=number%3==0
+#  case2=number%5==0
+ 
+#  if case1 and case2:
+#       print("fizzBuzz") 
+#  elif case1:
+#       print("Buzz")
+#  elif case2:
+#       print("fizz")
+#  else:
+#       print({number})    
+
+# Password Generator 7
+import random
+numbers = [5,4,3,4,5,6,7,8,9,10]
+letters = [
+    "a","b","c","d","e","f","g","h","i","j",
+    "k","l","m","n","o","p","q","r","s","t",
+    "u","v","w","x","y","z"
+]
+symbols = [
+    "!","@","#","$","%","^","&","*","(",")",
+    "-","_","+","=","/","\\","|","?",";",":",
+    "'","\"","<",">",",","."
+]
+
+print("Welcome to the PyPassword Generator")
+nr_numbers =int(input("How many numbers would you like in your password? \n"))
+nr_symbols =int(input("How many symbols would you like in your password? \n"))
+nr_letters =int(input("How many letters would you like in your password? \n"))
+
+gen_pass=""
+
+for number in range(1,nr_numbers + 1):
+   gen_pass += str(random.choice(numbers))
+for symbol in range(1,nr_symbols + 1):
+    gen_pass += str(random.choice(symbols))
+for letter in range(1,nr_letters + 1):
+    gen_pass += str(random.choice(letters))
+    
+print(gen_pass)
