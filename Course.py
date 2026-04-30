@@ -90,8 +90,39 @@
 #       print({number})    
 
 # Password Generator 7
+# Easy Level
+# import random
+# numbers = [5,4,3,4,5,6,7,8,9,10]
+# letters = [
+#     "a","b","c","d","e","f","g","h","i","j",
+#     "k","l","m","n","o","p","q","r","s","t",
+#     "u","v","w","x","y","z"
+# ]
+# symbols = [
+#     "!","@","#","$","%","^","&","*","(",")",
+#     "-","_","+","=","/","\\","|","?",";",":",
+#     "'","\"","<",">",",","."
+# ]
+
+# print("Welcome to the PyPassword Generator")
+# nr_numbers =int(input("How many numbers would you like in your password? \n"))
+# nr_symbols =int(input("How many symbols would you like in your password? \n"))
+# nr_letters =int(input("How many letters would you like in your password? \n"))
+
+# gen_pass=""
+
+# for number in range(1,nr_numbers + 1):
+#    gen_pass += str(random.choice(numbers))
+# for symbol in range(1,nr_symbols + 1):
+#     gen_pass += str(random.choice(symbols))
+# for letter in range(1,nr_letters + 1):
+#     gen_pass += str(random.choice(letters))
+    
+# print(gen_pass)
+
+# Hard level
 import random
-numbers = [5,4,3,4,5,6,7,8,9,10]
+numbers = ["1","2","3","4","5","6","7","8","9","10"]
 letters = [
     "a","b","c","d","e","f","g","h","i","j",
     "k","l","m","n","o","p","q","r","s","t",
@@ -108,13 +139,19 @@ nr_numbers =int(input("How many numbers would you like in your password? \n"))
 nr_symbols =int(input("How many symbols would you like in your password? \n"))
 nr_letters =int(input("How many letters would you like in your password? \n"))
 
-gen_pass=""
+gen_pass=[]
 
 for number in range(1,nr_numbers + 1):
-   gen_pass += str(random.choice(numbers))
+  gen_pass.append(random.choice(numbers))
 for symbol in range(1,nr_symbols + 1):
-    gen_pass += str(random.choice(symbols))
+  gen_pass.append(random.choice(symbols))
 for letter in range(1,nr_letters + 1):
-    gen_pass += str(random.choice(letters))
-    
-print(gen_pass)
+   gen_pass.append(random.choice(letters)) 
+
+random.shuffle(gen_pass)
+# password="".join(gen_pass)
+password=""
+for char in gen_pass:
+    password += char
+
+print(password)
