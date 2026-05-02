@@ -31,15 +31,23 @@
 # print(f"Is {a} greater than {b} and {a} is not equal to {b}  ? {(a>b) and (a!=b)}")
 # print(f"Is {a} less than {b}  or {a} is equal to {b} ? {(a<b) or (a==b)}")
 
-name=str(input("Enter your name :"))
-age=int(input("Enter your age :"))
-language=str(input("Enter your language :"))
+# name=str(input("Enter your name :"))
+# age=int(input("Enter your age :"))
+# language=str(input("Enter your language :"))
 
-print(" name :",name,"\n","age :",age,"\n","language :",language)
-profile={
-    "name":name,
-    "age":age,
-    "language":language
-}
+# print(" name :",name,"\n","age :",age,"\n","language :",language)
+# profile={
+#     "name":name,
+#     "age":age,
+#     "language":language
+# }
 
-print(profile)
+# print(profile)
+
+# number=12
+# alpha='abcd'
+# i=0
+# while i<=number:
+#     print(alpha[i])
+#     i+=1
+

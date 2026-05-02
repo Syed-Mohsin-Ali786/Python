@@ -53,3 +53,11 @@
 # name="ali"  
 # hobby="reading book"
 # result=f"My name is {name},I love to {hobby}"
+
+# shorthand if
+a=4
+b=6
+if(a>b):print("true")
+
+print("true") if a<b else  print(True)
+
