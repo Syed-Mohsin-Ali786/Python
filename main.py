@@ -1,6 +1,6 @@
 # a=3
 # b=4
-# print(a**b) 
+# print(a**b)
 # print(a*"ali")
 
 # print("hello world",end=" \n"*3)
@@ -32,7 +32,7 @@
 # print(f"The discount amount is: {discounted_price}")
 
 # list = ["ali","hassan","hussain"]
-# string =" apo ".join(list) 
+# string =" apo ".join(list)
 # print(string)
 
 # text=" hello. world . hello    "
@@ -50,14 +50,14 @@
 # print(result)
 
 # f string
-# name="ali"  
+# name="ali"
 # hobby="reading book"
 # result=f"My name is {name},I love to {hobby}"
 
 # shorthand if
-a=4
-b=6
-if(a>b):print("true")
+a = 4
+b = 6
+if a > b:
+    print("true")
 
-print("true") if a<b else  print(True)
-
+print("true") if a < b else print(True)
