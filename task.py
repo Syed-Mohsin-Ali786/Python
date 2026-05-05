@@ -18,7 +18,7 @@
 # print(f"Sum of {num1} and {num2} is {num1+num2}")
 # print(f"Difference of {num1} and {num2} is {num1-num2}")
 # print(f"Product of {num1} and {num2} is {num1*num2}")
-# print(f"Quotient of {num1} and {num2} is {num1/num2}")  
+# print(f"Quotient of {num1} and {num2} is {num1/num2}")
 # print(f"Remainder of {num1} and {num2} is {num1%num2}")
 
 # # Task 3 Comparison and Logical Expressions
@@ -51,3 +51,30 @@
 #     print(alpha[i])
 #     i+=1
 
+
+# fruits={"apple","mango"}
+# # fruits.remove("ali")
+# fruits.discard("ali")
+# print(fruits)
+
+# dis
+# dis={
+#     "name":"Ali",
+#     "age":20,
+#     "language":"Python"
+
+# }
+
+# # print(dis.get("name"))
+# dis.__setitem__("language","Pakistan")
+# dis.update({"age":21})s
+# print(dis)
+
+fruits = ["apo dulla", "marzigon"]
+[x.upper() for x in fruits]
+print(fruits)
+for i in range(1, 5):
+    for j in range(1, 5):
+        print("*", end="")
+    print()
+    

@@ -157,46 +157,52 @@
 # print(password)
 
 # Random Word Game
-import random
-
-# first method to generate random words
-# with open('words.txt','r') as file:
-#   words = file.read().splitlines()
-
-# random_word= random.choice(words)
-# print(random_word)
 
 # second method to generate random words
 # words = ['apple', 'banana', 'cherry', 'dog', 'cat']
 # random_word = random.choice(words)
 
 # third method to generate random words
-from generalwords import get_words  # This works!
+# from generalwords import get_words  # This works!
 
-words = get_words(n=10)  # Returns a tuple of words
-random_word = random.choice(words)
-print(random_word)
+# words = get_words(n=10)  # Returns a tuple of words
+# random_word = random.choice(words)
+# print(random_word)
+# first method to generate random words
 
-blanks = ""
-for blank in range(0, len(random_word)):
-    blanks += "-"
-
-guess_word = ""
-guess_letter = input("Guess a letter")
+import random
 
 
-def true(i):
-    blanks[i] = blanks[i].replace("_", guess_letter)
+def start_game():
+    with open("words.txt", "r") as file:
+        words = file.read().splitlines()
+
+    target_word = random.choice(words)
+    print(target_word)
+
+    display_arry = list(("-") * len(target_word))
+    # for blank in range(0, len(target_word)):
+    #     display_arry.append("-")
+    lives = 9
+    while "-" in display_arry and lives > 0:
+        print("\n current word:", "".join(display_arry))
+        
+        print("Lives remaining: ", lives)
+        user_guess = input("Guess a letter:").lower()
+        if user_guess in display_arry:
+            print(f"You have already guessed {user_guess}. Try a different letter.")
+        if user_guess in target_word:
+            for i in range(len(target_word)):
+                if target_word[i] == user_guess:
+                    display_arry[i] = user_guess
+        else:
+            lives -= 1
+            print("Incorrect guess")
+    if lives > 0:
+        print("congratulationn you won: ", "".join(display_arry),"is correct word")
+    else:
+        print("Game over.You ran out of lives.")
+        print("The word was: ", target_word)
 
 
-def check():
-    i = 0
-    for letter in random_word:
-        if guess_letter == letter:
-            true({i})
-        i += 1
-
-
-# while guess_word==random_word:
-
-check()
+start_game()
