@@ -170,39 +170,46 @@
 # print(random_word)
 # first method to generate random words
 
-import random
+# import random
 
 
-def start_game():
-    with open("words.txt", "r") as file:
-        words = file.read().splitlines()
+# def start_game():
+#     with open("words.txt", "r") as file:
+#         words = file.read().splitlines()
 
-    target_word = random.choice(words)
-    print(target_word)
+#     target_word = random.choice(words)
+#     print(target_word)
 
-    display_arry = list(("-") * len(target_word))
-    # for blank in range(0, len(target_word)):
-    #     display_arry.append("-")
-    lives = 9
-    while "-" in display_arry and lives > 0:
-        print("\n current word:", "".join(display_arry))
+#     display_arry = list(("-") * len(target_word))
+#     # for blank in range(0, len(target_word)):
+#     #     display_arry.append("-")
+#     lives = 9
+#     while "-" in display_arry and lives > 0:
+#         print("\n current word:", "".join(display_arry))
         
-        print("Lives remaining: ", lives)
-        user_guess = input("Guess a letter:").lower()
-        if user_guess in display_arry:
-            print(f"You have already guessed {user_guess}. Try a different letter.")
-        if user_guess in target_word:
-            for i in range(len(target_word)):
-                if target_word[i] == user_guess:
-                    display_arry[i] = user_guess
-        else:
-            lives -= 1
-            print("Incorrect guess")
-    if lives > 0:
-        print("congratulationn you won: ", "".join(display_arry),"is correct word")
-    else:
-        print("Game over.You ran out of lives.")
-        print("The word was: ", target_word)
+#         print("Lives remaining: ", lives)
+#         user_guess = input("Guess a letter:").lower()
+#         if user_guess in display_arry:
+#             print(f"You have already guessed {user_guess}. Try a different letter.")
+#         if user_guess in target_word:
+#             for i in range(len(target_word)):
+#                 if target_word[i] == user_guess:
+#                     display_arry[i] = user_guess
+#         else:
+#             lives -= 1
+#             print("Incorrect guess")
+#     if lives > 0:
+#         print("congratulationn you won: ", "".join(display_arry),"is correct word")
+#     else:
+#         print("Game over.You ran out of lives.")
+#         print("The word was: ", target_word)
 
 
-start_game()
+# start_game()
+
+def greet():
+    print("good")
+    print("excelent")
+    print("outstanding")
+
+greet()
