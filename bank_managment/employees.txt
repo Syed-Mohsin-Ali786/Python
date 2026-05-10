@@ -1,4 +1,2 @@
-0||abidjanjowa||chenofotehandowa@gmail.com
-3||askari||naskori@gmail.com
-4||charcha||chaiaurcharcha@gmail.com
-5||shabir||shabiree@gmail.com0||abidjanjowa||chenofotehandowa@gmail.com
+3||mushu||mushu@gmail.com||clerk||1234
+6||chasma||chasmatu@gmail.com||clerk||1234
