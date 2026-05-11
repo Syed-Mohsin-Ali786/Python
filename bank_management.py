@@ -57,12 +57,25 @@ def adminRole():
 
                 name = user_input("Name of employee: ")
                 email = user_input("Email of employee: ")
-                role = user_input("Enter the role: ")
+                while True:
+                    print("1. manager | 2. teller | 3. clerk")
+                    choice = user_input("Choice: ")
+                    match choice:
+                        case "1":
+                            role = "manager"
+                            break
+                        case "2":
+                            role = "teller"
+                            break
+                        case "3":
+                            role = "clerk"
+                            break
+                        case _:
+                            print("Enter only the from the options")
                 role_password = user_input("Enter the role_password: ")
                 employee_data = (
                     f"{employee_id}||{name}||{email}||{role}||{role_password}\n"
                 )
-                print(employee_data)
                 with open("./bank_managment/employees.txt", "a") as employees:
                     employees.writelines(employee_data)
                     print("sucessfully added")
@@ -123,7 +136,9 @@ def clerkRole():
                 authorize = True
         if authorize:
             print("==" * 5, "clerk Pannel", "==" * 5)
-            print("Enter 1 to add new account: \nEnter 2 to update data: ")
+            print(
+                "Enter 1 to add new account: \nEnter 2 to update data: \nEnter 3 to veiw data: "
+            )
             clerOption = user_input("Choice: ")
         else:
             print("You are not authorize", "Error code 401")
@@ -194,6 +209,19 @@ def clerkRole():
                 print("Customer ID not found.")
         # with open("./bank_managment/employees.txt", "w") as employees:
         #     employees.writelines(remove_list)
+    elif clerOption == "3":
+        with open("./bank_managment/customer.txt", "r") as customers:
+            lines = customers.readlines()
+            print("-" * 60)
+            print(f"{'Id':<5}|{'Name':<10}|{'Email':<20}|{'Amount':<10}")
+            print("-" * 60)
+            for line in lines:
+                data = line.strip().split("||")
+                print(f"{data[0]:<5}|{data[1]:<10}|{data[2]:<20}|{data[3]:<10}")
+            print("-" * 60)
+
+            user_input("\nPress Enter to return to Clerk Panel...")
+            return
 
 
 while True:

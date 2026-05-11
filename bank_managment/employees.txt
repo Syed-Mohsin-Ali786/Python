@@ -1,2 +1,4 @@
 3||mushu||mushu@gmail.com||clerk||1234
 6||chasma||chasmatu@gmail.com||clerk||1234
+7||ghalib||ghalib786@gmail.com||manager||4345
+8||mohsin||mohsin@gmail.com||manager||345
