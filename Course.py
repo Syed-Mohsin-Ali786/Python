@@ -186,7 +186,7 @@
 #     lives = 9
 #     while "-" in display_arry and lives > 0:
 #         print("\n current word:", "".join(display_arry))
-        
+
 #         print("Lives remaining: ", lives)
 #         user_guess = input("Guess a letter:").lower()
 #         if user_guess in display_arry:
@@ -207,9 +207,91 @@
 
 # start_game()
 
-def greet():
-    print("good")
-    print("excelent")
-    print("outstanding")
+# def greet():
+#     print("good")
+#     print("excelent")
+#     print("outstanding")
 
-greet()
+# greet()
+
+# Area Calculation
+# import math
+# test_h = int(input("Enter the height of house: "))
+# test_w = int(input("Enter the width of house: "))
+# coverage = 5
+
+
+# def area(test_h, test_w, coverage):
+#     total_required = (test_h * test_w) / coverage
+#     print(math.ceil(total_required))
+
+
+# area(test_h, test_w, coverage)
+
+# Caesar cypher
+letters = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+]
+
+direction = input("Type 'encode' to encrypt,type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+
+# def caesar(start_text,shift_amount)
+# Encoding
+def encode(plain_text, shift_amount):
+    encode_text = ""
+    for letter in plain_text:
+        position = letters.index(letter)
+        new_postion = position + shift_amount
+        new_postion=(position + shift_amount) % 26
+        encode_text += letters[new_postion]
+
+    return encode_text
+
+
+def decode(encrypt_text, shif_amount):
+    decode_text = ""
+    for letter in encrypt_text:
+        position = letters.index(letter)
+        new_position = position - shif_amount
+        if new_position <= 0:
+            updated_postion = len(letters) + new_position
+            decode_text += letters[updated_postion]
+        else:
+            decode_text += letters[new_position]
+    return decode_text
+
+
+encode_text = encode(plain_text=text, shift_amount=shift)
+decode_text = decode(encrypt_text=encode_text, shif_amount=shift)
+if direction == "encode":
+    encode_text
+elif direction == "decode":
+    print(decode_text)

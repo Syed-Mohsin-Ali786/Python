@@ -71,48 +71,58 @@
 #     else:
 #         print("Invalid email or password")
 
-import os
+# import os
 
-while True:
-    print(
-        "Enter 1 add file: \nEnter 2 to view file: \nEnter 3 remove file: \nEnter 4 update file \nEnter 0 to exit: "
-    )
-    userInput = input("Choice: ")
+# while True:
+#     print(
+#         "Enter 1 add file: \nEnter 2 to view file: \nEnter 3 remove file: \nEnter 4 update file \nEnter 0 to exit: "
+#     )
+#     userInput = input("Choice: ")
 
-    match userInput:
-        case "0":
-            break
-        case "1":
-            print("add a file ")
-            with open("user_data.txt", "a") as file:
-                name = input("Enter your name: ").strip()
-                email = input("Enter your email: ").strip()
-                age = input("Enter your age: ").strip()
-                userData = [name, email, age]
-                hanjee = "||".join(userData)
-                if name and email and age:
-                    file.write(hanjee)
-                    break        
-        case "4":
-            email = input("Enter your email: ")
-            with open("user_data.txt", "r") as f:
-                isOpen = False
-                student_list = f.readlines()
-                print(student_list)
-                for index, student in enumerate(student_list):
-                    record = student.strip().split()
-                    if record[1] == email:
-                        name = input("Enter Name")
-                        age = input("Enter age")
-                        student_list[index] = f"{name}||{email},{age}"
-                        isOpen = True
-                        break
-            if isOpen:
-                with open("user_data.txt", "a") as file:
-                    file.writelines(student_list)
-                    print("successfully added")
-            else:
-                print("file not opened")
+#     match userInput:
+#         case "0":
+#             break
+#         case "1":
+#             print("add a file ")
+#             with open("user_data.txt", "a") as file:
+#                 name = input("Enter your name: ").strip()
+#                 email = input("Enter your email: ").strip()
+#                 age = input("Enter your age: ").strip()
+#                 userData = [name, email, age]
+#                 hanjee = "||".join(userData)
+#                 if name and email and age:
+#                     file.write(hanjee)
+#                     break        
+#         case "4":
+#             email = input("Enter your email: ")
+#             with open("user_data.txt", "r") as f:
+#                 isOpen = False
+#                 student_list = f.readlines()
+#                 print(student_list)
+#                 for index, student in enumerate(student_list):
+#                     record = student.strip().split()
+#                     if record[1] == email:
+#                         name = input("Enter Name")
+#                         age = input("Enter age")
+#                         student_list[index] = f"{name}||{email},{age}"
+#                         isOpen = True
+#                         break
+#             if isOpen:
+#                 with open("user_data.txt", "a") as file:
+#                     file.writelines(student_list)
+#                     print("successfully added")
+#             else:
+#                 print("file not opened")
     
    
-os.system("cls")
+# os.system("cls")
+
+def print_data(**dis):
+    print(dis)
+
+def print_list(*list):
+    print(list)
+
+# if you want to save function in a variable 
+list_function=print_list
+print(list_function(3))
