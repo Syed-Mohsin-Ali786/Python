@@ -258,40 +258,32 @@ letters = [
     "z",
 ]
 
-direction = input("Type 'encode' to encrypt,type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
 
-
-# def caesar(start_text,shift_amount)
-# Encoding
-def encode(plain_text, shift_amount):
-    encode_text = ""
-    for letter in plain_text:
-        position = letters.index(letter)
-        new_postion = position + shift_amount
-        new_postion=(position + shift_amount) % 26
-        encode_text += letters[new_postion]
-
-    return encode_text
-
-
-def decode(encrypt_text, shif_amount):
-    decode_text = ""
-    for letter in encrypt_text:
-        position = letters.index(letter)
-        new_position = position - shif_amount
-        if new_position <= 0:
-            updated_postion = len(letters) + new_position
-            decode_text += letters[updated_postion]
+def caesar(plain_text, shift_amount, cypher_direction):
+    end_text = ""
+    shift_amount %= 26
+    if cypher_direction == "decode":
+        shift_amount *= -1
+    for char in plain_text:
+        if char in letters:
+            position = letters.index(char)
+            new_postion = (position + shift_amount) % 26
+            end_text += letters[new_postion]
         else:
-            decode_text += letters[new_position]
-    return decode_text
+            end_text += plain_text
+    print(f"The {cypher_direction}d is {end_text}")
 
 
-encode_text = encode(plain_text=text, shift_amount=shift)
-decode_text = decode(encrypt_text=encode_text, shif_amount=shift)
-if direction == "encode":
-    encode_text
-elif direction == "decode":
-    print(decode_text)
+should_continue = True
+while should_continue:
+    direction = input("Type 'encode' to encrypt,type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
+    # def caesar(start_text,shift_amount)
+    # Encoding
+    caesar(plain_text=text, shift_amount=shift, cypher_direction=direction)
+    result = input("Enter Yes if you want to continue else No: ")
+    if result == "No":
+        print("Good bye")
+        should_continue = False
