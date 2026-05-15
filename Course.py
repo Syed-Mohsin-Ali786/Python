@@ -229,61 +229,61 @@
 # area(test_h, test_w, coverage)
 
 # Caesar cypher
-letters = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-]
+# letters = [
+#     "a",
+#     "b",
+#     "c",
+#     "d",
+#     "e",
+#     "f",
+#     "g",
+#     "h",
+#     "i",
+#     "j",
+#     "k",
+#     "l",
+#     "m",
+#     "n",
+#     "o",
+#     "p",
+#     "q",
+#     "r",
+#     "s",
+#     "t",
+#     "u",
+#     "v",
+#     "w",
+#     "x",
+#     "y",
+#     "z",
+# ]
 
 
-def caesar(plain_text, shift_amount, cypher_direction):
-    end_text = ""
-    shift_amount %= 26
-    if cypher_direction == "decode":
-        shift_amount *= -1
-    for char in plain_text:
-        if char in letters:
-            position = letters.index(char)
-            new_postion = (position + shift_amount) % 26
-            end_text += letters[new_postion]
-        else:
-            end_text += plain_text
-    print(f"The {cypher_direction}d is {end_text}")
+# def caesar(plain_text, shift_amount, cypher_direction):
+#     end_text = ""
+#     shift_amount %= 26
+#     if cypher_direction == "decode":
+#         shift_amount *= -1
+#     for char in plain_text:
+#         if char in letters:
+#             position = letters.index(char)
+#             new_postion = (position + shift_amount) % 26
+#             end_text += letters[new_postion]
+#         else:
+#             end_text += plain_text
+#     print(f"The {cypher_direction}d is {end_text}")
 
 
-should_continue = True
-while should_continue:
-    direction = input("Type 'encode' to encrypt,type 'decode' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
+# should_continue = True
+# while should_continue:
+#     direction = input("Type 'encode' to encrypt,type 'decode' to decrypt:\n")
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
 
-    # def caesar(start_text,shift_amount)
-    # Encoding
-    caesar(plain_text=text, shift_amount=shift, cypher_direction=direction)
-    result = input("Enter Yes if you want to continue else No: ")
-    if result == "No":
-        print("Good bye")
-        should_continue = False
+#     # def caesar(start_text,shift_amount)
+#     # Encoding
+#     caesar(plain_text=text, shift_amount=shift, cypher_direction=direction)
+#     result = input("Enter Yes if you want to continue else No: ")
+#     if result == "No":
+#         print("Good bye")
+#         should_continue = False
