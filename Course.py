@@ -287,3 +287,96 @@
 #     if result == "No":
 #         print("Good bye")
 #         should_continue = False
+
+# dictionary
+
+# dictionary = {
+#     "bug": "some errror that will break the code from running",
+#     "function": "a piece of code which we create to aviod from repetition of code  and to call againg and again",
+#     "loop": "the action of doing something over and over again",
+# }
+
+# for key in dictionary:
+#     print(key,":",dictionary[key])
+
+# scores = {"abid": "100", "chasma": "55", "faul": "75", "rauf": "85", "ali": "99"}
+
+# for key in scores:
+#     score = int(scores[key])
+#     if score >= 90:
+#         print(f"{key} got grade A")
+#     elif score >= 80:
+#         print(f"{key} got grad B")
+#     else:
+#         print(f"{key}fail")
+
+# Nesting dictionary challenge
+
+# travel_log = [
+#     {"country": "France", "visits": 3, "cities": ["Paris", "Lille", "Dijon"]},
+#     {
+#         "country": "Iran",
+#         "visits": 50,
+#         "cities": [
+#             "Tehran",
+#             "qum",
+#             "mashhad",
+#         ],
+#     },
+# ]
+
+
+# def add_new_country(country, visits, cities):
+#     new_country_dic={
+#         "country":country,
+#         "visits":visits,
+#         "cities":cities
+#     }
+#     travel_log.insert(1,new_country_dic)
+#     return travel_log
+
+
+# updated=add_new_country("Russia", 2, ["Moscow", "Saint perterbious"])
+# print(travel_log)
+
+# Bidding Game
+
+import os
+
+print("Welcome to the secrete auction program.")
+
+game_continue = True
+biders = {}
+while game_continue:
+    name = input("What is your name?: ")
+    bids = input("What's your Charity?: $")
+    if bids.isdigit():
+        biders["name"] = name
+        biders["bids"] = bids
+
+        while True:
+            any_bider = input("Are there any other bidders? 'yes' or 'no': ")
+
+            if any_bider == "yes" or any_bider == "no":
+                break
+
+            print("Enter only 'yes' or 'no'")
+        if any_bider == "no":
+            game_continue = False
+        elif any_bider == "yes":
+            os.system("cls")
+            continue
+
+    else:
+        print("Enter a valid number")
+
+winner = {}
+gerater_bid = 0
+for bider in biders:
+    if int(bider["bids"]) > gerater_bid:
+        gerater_bid = int(bider["bids"])
+        winner["name"] = bider["name"]
+        winner["bids"] = bider["bids"]
+
+print(f"{winner['name']} is the winner who bids are {winner['bids']}")
+# print(biders)

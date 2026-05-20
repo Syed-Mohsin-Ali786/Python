@@ -149,20 +149,146 @@
 # print(f.location().located)
 
 
-class Student:
-    def __init__(self, course, duration):
-        self.course = course
-        self.duration = duration
+# class Student:
+#     def __init__(self, course, duration):
+#         self.course = course
+#         self.duration = duration
 
-    def bio(self, name, age):
-        self.name = name
-        self.age = age
-        return self
+#     def bio(self, name, age):
+#         self.name = name
+#         self.age = age
+#         return self
 
-    def purpose(self):
-        return self
+#     def purpose(self):
+#         return self
 
 
-first_student = Student("Gen AI", "4 Month").bio("syed mohsin", 22)
-first_student.purpose().paragh = "To learn something"
-print(first_student.purpose().name)
+# first_student = Student("Gen AI", "4 Month").bio("syed mohsin", 22)
+# first_student.purpose().paragh = "To learn something"
+# print(first_student.purpose().name)
+
+
+# class office:
+#     def __init__(self, name, location):
+#         self.name = name
+#         self.location = location
+#     def branches(self):
+#         return self
+#     def
+# office1 = office("akhwat", "faisalabad")
+# office2 = office("nadra", "kursu")
+# print(f"{office1.name}\n{office1.location}\n{office2.name}\n{office2.location}")
+
+
+# class Student:
+#     def __init__(self, course, duration):
+#         self.course = course
+#         self.duration = duration
+
+#     def bio(self, name, age):
+#         self.name = name
+#         self.age = age
+#         return self
+
+#     def goal(self):
+#         return self
+
+#     def add(self):
+#         self.age += 1
+#         print(f"{self.age}")
+#     def show(self):
+#         print(self.age)
+
+
+# second = Student("Gen AI", "4 month")
+
+# fS = Student("Gen", "4 month").bio("Qamer", 40).goal()
+# fS.goal().paragh = "to learn something"
+
+# print(fS.add())
+# print(fS.add())
+# print(fS.add())
+# print(fS.age)
+
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = (name,)
+#         self.age = age
+
+#     def city(self):
+#         self.location = "gazi abad"
+#         return self
+
+
+# class Student(Person):
+#     def __init__(self, name, age):
+#         super().__init__(name, age)
+#         self.section = "Gen AI"
+
+
+# Student1 = Person("ali", 21).city()
+# print(Student1.location)
+# print(Student1.age)
+
+
+# class Bird:
+#     def fly(self):
+#         self.name = "mohsin"
+#         print("Birds can fly")
+#         return self
+
+
+# class Penguin(Bird):
+#     def fly(self):
+#         self.name="noman"
+#         print("Penguins can't fly")
+#         return self
+
+
+# obj1 = Bird()
+
+# obj2 = Penguin()
+
+# print(obj1.fly().name, obj2.fly().name)
+
+# class Shape:
+
+#  def area(self):
+
+#   pass
+
+# class Circle(Shape):
+ 
+#   def area(self):
+ 
+#    print("Area of circle = πr²")
+ 
+# class Rectangle(Shape):
+ 
+#   def area(self):
+ 
+#    print("Area of rectangle = l × w")
+ 
+#  # Common interface
+ 
+# for shape in [Circle(), Rectangle()]:
+#     print(shape.area())
+
+
+# class Computer:
+#     def __init__(self):
+#         self.CPU=self.CPU()
+#         self.RAM=self.RAM()
+#     class CPU:
+#         def process(self):
+#             work="process data"
+#             return work
+#     class RAM:
+#         def store(self):
+#             work="storing data"
+#             return work
+        
+# computer=Computer()
+# print(computer.CPU.process())
+# print(computer.RAM.store())
