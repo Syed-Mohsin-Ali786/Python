@@ -341,42 +341,62 @@
 
 # Bidding Game
 
-import os
+# import os
 
-print("Welcome to the secrete auction program.")
+# print("Welcome to the secrete auction program.")
 
-game_continue = True
-biders = {}
-while game_continue:
-    name = input("What is your name?: ")
-    bids = input("What's your Charity?: $")
-    if bids.isdigit():
-        biders["name"] = name
-        biders["bids"] = bids
+# game_continue = True
+# biders = {}
+# while game_continue:
+#     name = input("What is your name?: ")
+#     bids = input("What's your Charity?: $")
+#     if bids.isdigit():
+#         biders["name"] = name
+#         biders["bids"] = bids
 
-        while True:
-            any_bider = input("Are there any other bidders? 'yes' or 'no': ")
+#         while True:
+#             any_bider = input("Are there any other bidders? 'yes' or 'no': ")
 
-            if any_bider == "yes" or any_bider == "no":
-                break
+#             if any_bider == "yes" or any_bider == "no":
+#                 break
 
-            print("Enter only 'yes' or 'no'")
-        if any_bider == "no":
-            game_continue = False
-        elif any_bider == "yes":
-            os.system("cls")
-            continue
+#             print("Enter only 'yes' or 'no'")
+#         if any_bider == "no":
+#             game_continue = False
+#         elif any_bider == "yes":
+#             os.system("cls")
+#             continue
 
+#     else:
+#         print("Enter a valid number")
+
+# winner = {}
+# gerater_bid = 0
+# for bider in biders:
+#     if int(bider["bids"]) > gerater_bid:
+#         gerater_bid = int(bider["bids"])
+#         winner["name"] = bider["name"]
+#         winner["bids"] = bider["bids"]
+
+# print(f"{winner['name']} is the winner who bids are {winner['bids']}")
+# # print(biders)
+
+def is_leap(year):
+    if year%4==0:
+        if year%100==0:
+            if year%400==0:
+                print("Leap year.")
+            else:
+                print("Not Leap year")
+        else:
+            print("Leap year.")
     else:
-        print("Enter a valid number")
+        print("Not leap year")
+        
+def days_in_month():
+    months_days=[31,28,31,30,31,30,31,31,30,31,30]
 
-winner = {}
-gerater_bid = 0
-for bider in biders:
-    if int(bider["bids"]) > gerater_bid:
-        gerater_bid = int(bider["bids"])
-        winner["name"] = bider["name"]
-        winner["bids"] = bider["bids"]
-
-print(f"{winner['name']} is the winner who bids are {winner['bids']}")
-# print(biders)
+year=int(input("Enter year"))
+month=int(input("Enter month"))
+days=days_in_month(year,month) 
+print(days)
