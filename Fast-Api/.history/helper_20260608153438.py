@@ -12,5 +12,7 @@ def read():
 
 
 def write(data: dict):
-    with open(filename, "w") as file:
-        json.dump(data, file, indent=4)
+    current_data = read()
+    new_data = current_data.append(data)
+    with open(filename, "a") as file:
+        json.dump(new_data, file, indent=4)
