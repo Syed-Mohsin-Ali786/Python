@@ -1,1 +1,11 @@
-/.history
+# Ignore history extensions
+.history/
+
+# Ignore Python virtual environments
+.venv/
+
+# Ignore compiled Python files
+__pycache__/
+
+# Ignore VS Code workspace settings
+.vscode/
