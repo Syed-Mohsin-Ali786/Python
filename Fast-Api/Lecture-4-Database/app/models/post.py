@@ -1,10 +1,8 @@
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, ForeignKey
 from app.database import Base
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from app.models.user import User
-# from app.models.user import User
+
+
 
 class Post(Base):
     __tablename__ = "posts"
@@ -19,7 +17,7 @@ class Post(Base):
     )
 
     category_id: Mapped[int] = mapped_column(
-        ForeignKey("users.id")
+        ForeignKey("categories.id")
     )
 
     description: Mapped[str]
@@ -27,3 +25,9 @@ class Post(Base):
     user: Mapped["User"] = relationship(
         back_populates="posts"
     )
+    
+    category: Mapped["Category"] = relationship(
+        back_populates="posts"
+    )
+    
+    

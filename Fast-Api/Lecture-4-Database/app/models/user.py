@@ -1,10 +1,7 @@
 from app.database import Base
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String
-from typing import TYPE_CHECKING
 
-if TYPE_CHECKING:
-    from app.models.post import Post
 
 
 class User(Base):
@@ -18,6 +15,8 @@ class User(Base):
     email:Mapped[str] = mapped_column(
         unique=True
     )
+    
+    password:Mapped[str]
 
     posts: Mapped[list["Post"]] = relationship(
         back_populates="user"
